@@ -15,11 +15,11 @@ docker info                    # הצגת מידע על מערכת Docker
 docker help                    # הצגת עזרה לפקודות Docker
 
 ### עבודה עם אימג'ים (Images)
-docker pull [image_name]       # הורדת תמונה ממאגר Docker Hub
+docker pull [image_name]       # הורדת אימג' ממאגר Docker Hub
 docker images                  # הצגת כל התמונות הקיימות במערכת
-docker rmi [image_name]        # מחיקת תמונה מהמקומי
-docker build -t [image_name] . # בניית תמונה מקובץ Dockerfile
-docker tag [image_name] [new_image_name]  # תיוג מחדש של תמונה
+docker rmi [image_name]        # מחיקת אימג' מהמקומי
+docker build -t [image_name] . # בניית אימג' מקובץ Dockerfile
+docker tag [image_name] [new_image_name]  # תיוג מחדש של אימג'
 
 ### עבודה עם קונטיינרים
 docker run [image_name]                   # יצירת קונטיינר והרצתו

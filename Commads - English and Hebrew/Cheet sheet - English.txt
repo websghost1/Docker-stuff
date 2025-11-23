@@ -1,0 +1,55 @@
+If you are Hebrew native and you want to learn about Docker containers you can find it here: https://www.leidertech.co.il/p/blog-page_1.html
+
+
+#01. Here are some commonly used Docker commands with a brief description of their use:
+
+docker build: Builds an image from a Dockerfile.
+docker run: Runs a container from an image.
+docker ps: Lists running containers.
+docker images: Lists local images.
+docker stop: Stops a running container.
+docker rm: Removes a stopped container.
+docker rmi: Removes an image.
+docker logs: Displays logs from a container.
+docker exec: Runs a command inside a running container.
+docker pull: Downloads an image from a registry.
+docker push: Uploads an image to a registry.
+docker network: Manages Docker networks.
+docker volume: Manages Docker volumes.
+docker-compose: Runs multi-container Docker applications using a YAML file.
+docker swarm: Manages a swarm of Docker nodes.
+docker service: Manages Docker services in a swarm.
+
+Note that this is not an exhaustive list, and there are many more Docker commands and options available.
+You can use the docker — help command to see a full list of available commands,
+or docker <command> — help to see more information about a specific command.
+
+#02. Here are some commonly used Docker network commands with a brief description of their use:
+docker network create: Creates a new Docker network.
+docker network ls: Lists all Docker networks.
+docker network inspect: Displays detailed information about a Docker network.
+docker network connect: Connects a container to a Docker network.
+docker network disconnect: Disconnects a container from a Docker network.
+docker network rm: Removes a Docker network.
+Note that this is not an exhaustive list, and there are many more Docker network commands and options available. You can use the docker network --help command to see a full list of available commands, or docker network <command> --help to see more information about a specific command.
+
+#03. Here are some commonly used Docker volume commands with a brief description of their use:
+docker volume create: Creates a new volume.
+docker volume ls: Lists all volumes.
+docker volume inspect: Displays detailed information about a volume.
+docker volume rm: Removes a volume.
+docker volume prune: Removes all unused volumes.
+Note that Docker volumes allow data to persist even after containers are deleted, making them useful for data storage and sharing between containers. With these volume commands, you can create, list, inspect, remove, and prune volumes as needed to manage your Docker environment.
+
+#04. Here are some commonly used Docker Compose commands with a brief description of their use:
+docker-compose up: Builds and starts containers based on the docker-compose.yml file.
+docker-compose down: Stops and removes containers created by docker-compose up command.
+docker-compose ps: Lists containers created by docker-compose.
+docker-compose logs: Displays logs for containers created by docker-compose.
+docker-compose build: Builds images for services defined in the docker-compose.yml file.
+docker-compose start: Starts containers created by docker-compose.
+docker-compose stop: Stops containers created by docker-compose.
+docker-compose restart: Restarts containers created by docker-compose.
+docker-compose exec: Runs a command inside a running container.
+docker-compose config: Validates and displays the compose file.
+Note that this is not an exhaustive list, and there are many more Docker Compose commands and options available. You can use the docker-compose --help command to see a full list of available commands, or docker-compose <command> --help to see more information about a specific command.

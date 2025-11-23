@@ -1,0 +1,54 @@
+רוצים לדעת דוקר אבל יש לכם בעיות עם אנגלית?
+או שאין לכם בעיות באנגלית אבל יותר נוח בעברית?
+
+התשובה כאן - מדריך דוקר שלם בעברית עם סרטונים ובחינם !
+(לא יענו בחינם, אלה ממש בחינם)
+
+https://www.leidertech.co.il/p/blog-page_1.html
+
+
+פקודות דוקר עם הסברים בעברית !
+
+### פקודות בסיסיות
+docker --version               # הצגת גרסת Docker המותקנת
+docker info                    # הצגת מידע על מערכת Docker
+docker help                    # הצגת עזרה לפקודות Docker
+
+### עבודה עם אימג'ים (Images)
+docker pull [image_name]       # הורדת תמונה ממאגר Docker Hub
+docker images                  # הצגת כל התמונות הקיימות במערכת
+docker rmi [image_name]        # מחיקת תמונה מהמקומי
+docker build -t [image_name] . # בניית תמונה מקובץ Dockerfile
+docker tag [image_name] [new_image_name]  # תיוג מחדש של תמונה
+
+### עבודה עם קונטיינרים
+docker run [image_name]                   # יצירת קונטיינר והרצתו
+docker run -d [image_name]                # הרצת קונטיינר ברקע (במצב detached)
+docker run -p [host_port]:[container_port] [image_name]  # פתיחת פורטים בקונטיינר להרצה במערכת המקומית
+docker run -v [host_dir]:[container_dir] [image_name]    # חיבור תיקיה מהמחשב לקונטיינר
+docker ps                                # הצגת כל הקונטיינרים הפעילים
+docker ps -a                             # הצגת כל הקונטיינרים (פעילים ומושבתים)
+docker stop [container_id]               # עצירת קונטיינר פעיל
+docker start [container_id]              # הפעלת קונטיינר מושבת
+docker restart [container_id]            # אתחול קונטיינר
+docker rm [container_id]                 # מחיקת קונטיינר מושבת
+docker exec -it [container_id] /bin/bash # הרצת פקודת shell בקונטיינר פעיל
+
+### רשתות (Networks)
+docker network ls                        # הצגת כל הרשתות
+docker network create [network_name]     # יצירת רשת חדשה
+docker network connect [network_name] [container_name]  # חיבור קונטיינר לרשת מסוימת
+docker network disconnect [network_name] [container_name]  # ניתוק קונטיינר מרשת מסוימת
+
+### נפחים (Volumes)
+docker volume ls                         # הצגת כל הנפחים הקיימים
+docker volume create [volume_name]       # יצירת נפח חדש
+docker volume rm [volume_name]           # מחיקת נפח
+docker run -v [volume_name]:[container_dir] [image_name]  # חיבור נפח לקונטיינר
+
+### Docker Compose
+docker-compose up                        # הרצת Docker Compose לפי קובץ docker-compose.yml
+docker-compose down                      # עצירה ומחיקה של כל הקונטיינרים ברמת Compose
+docker-compose build                     # בניית כל השירותים בקובץ Compose
+docker-compose logs                      # הצגת הלוגים של כל השירותים בקובץ Compose
+docker-compose exec [service_name] [command]  # הרצת פקודה בשירות ספציפי
